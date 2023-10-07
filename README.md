@@ -26,3 +26,5 @@
 6.  驱动_读取硬件断点命中信息: ReadHwBpInfo
 7.  驱动_清空硬件断点命中信息: CleanHwBpInfo
 8.  驱动_关闭进程: CloseHandle
+
+[教程](https://bbs.kanxue.com/thread-278647-1.htm)
