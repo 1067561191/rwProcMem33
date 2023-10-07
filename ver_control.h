@@ -1,4 +1,5 @@
-﻿#ifndef VERSION_CONTROL_H_
+// 修改
+#ifndef VERSION_CONTROL_H_
 #define VERSION_CONTROL_H_
 #define DEV_FILENAME "rwProcMem37" //当前驱动DEV文件名
 
@@ -13,12 +14,13 @@
 
 //直接调用内核API进行用户层数据交换
 #define CONFIG_DIRECT_API_USER_COPY
-
+// 4.11之后注释掉
 //启用页表计算物理内存的地址
-#define CONFIG_USE_PAGE_TABLE_CALC_PHY_ADDR
+//#define CONFIG_USE_PAGE_TABLE_CALC_PHY_ADDR
 
+// 4.11之前注释掉
 //启用读取pagemap文件来计算物理内存的地址
-//#define CONFIG_USE_PAGEMAP_FILE_CALC_PHY_ADDR
+#define CONFIG_USE_PAGEMAP_FILE_CALC_PHY_ADDR
 
 //打印内核调试信息
 //#define CONFIG_DEBUG_PRINTK
@@ -32,6 +34,8 @@
 #ifndef KERNEL_VERSION
 #define KERNEL_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))
 #endif
+
+// 开启一个离自己内核版本最近的
 #ifndef MY_LINUX_VERSION_CODE 
 //#define MY_LINUX_VERSION_CODE KERNEL_VERSION(3,10,0)
 //#define MY_LINUX_VERSION_CODE KERNEL_VERSION(3,10,84)
